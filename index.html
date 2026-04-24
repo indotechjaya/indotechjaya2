@@ -11,13 +11,12 @@
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-
-  <!-- Open Graph (WhatsApp, Facebook, dll) -->
-<meta property="og:title" content="Indotech Jaya - Produsen Mesin Press Industri">
-<meta property="og:description" content="Produsen mesin press sejak 2013. Melayani seluruh Indonesia. Custom sesuai kebutuhan industri.">
-<meta property="og:image" content="https://indotechjaya.my.id/thumbnail.jpg">
-<meta property="og:url" content="https://indotechjaya.my.id">
-<meta property="og:type" content="website">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Indotech Jaya - Produsen Mesin Press Industri">
+  <meta property="og:description" content="Produsen mesin press sejak 2013. Melayani seluruh Indonesia. Custom sesuai kebutuhan industri.">
+  <meta property="og:image" content="https://indotechjaya.my.id/thumbnail.jpg">
+  <meta property="og:url" content="https://indotechjaya.my.id">
+  <meta property="og:type" content="website">
 
   <style>
     body {margin:0;font-family:Arial;background:#f4f4f4;}
@@ -26,80 +25,72 @@
     nav a {color:#fff;margin:0 15px;text-decoration:none;}
     nav a:hover {color:gold;}
 
-  @media (max-width: 768px) {
+    /* HERO FIX */
+    .hero {
+      position: relative;
+      background: url('https://indotechjaya.my.id/mesin-utama.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      overflow: hidden;
+    }
 
-  .hero {
-  position: relative;
-  background: url('https://indotechjaya.my.id/mesin-utama.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-  overflow: hidden;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(3px);
+    }
 
-  .hero h2 {
-    font-size: 22px; /* kecilkan judul di HP */
-    line-height: 1.3;
-  }
+    .hero * {
+      position: relative;
+      z-index: 1;
+    }
 
-  .hero p {
-    font-size: 14px;
-  }
+    .hero h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-}
-   .hero {
-  position: relative;
-  background: url('images/mesin-utama.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-  overflow: hidden;
-}
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-/* lapisan gelap + blur efek */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(3px);
-}
+    /* RESPONSIVE HP */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 50px 15px;
+      }
 
-/* pastikan teks di atas layer */
-.hero * {
-  position: relative;
-  z-index: 1;
-}
+      .hero h2 {
+        font-size: 22px;
+      }
 
-.hero h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
-}
+      .hero p {
+        font-size: 14px;
+      }
+    }
 
     .btn {
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: white;
-  padding: 14px 25px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 15px;
-  transition: 0.3s;
-}
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 14px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
     .container {padding:20px;max-width:1100px;margin:auto;}
-
     .produk {display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
 
     .card {
@@ -134,6 +125,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -152,7 +144,7 @@
   <h2>Produsen Mesin Press Berkualitas & Custom</h2>
   <p>Berpengalaman sejak 2013 melayani kebutuhan mesin industri di seluruh Indonesia</p>
   <br>
-  <a href="https://wa.me/08777150500?text=Halo%20saya%20ingin%20konsultasi%20mesin%20press" class="btn" target="_blank">
+  <a href="https://wa.me/6287771505000?text=Halo%20saya%20ingin%20konsultasi%20mesin%20press" class="btn" target="_blank">
     Konsultasi Gratis via WhatsApp
   </a>
 </section>
@@ -233,7 +225,7 @@
   <div class="highlight" data-aos="fade-up">
     <h2>Butuh Mesin Custom?</h2>
     <p>Konsultasikan kebutuhan Anda sekarang dan dapatkan solusi terbaik dari tim kami.</p>
-    <a href="https://wa.me/628771505000?text=Halo%20saya%20ingin%20order%20mesin" class="btn">Minta Penawaran</a>
+    <a href="https://wa.me/6287771505000?text=Halo%20saya%20ingin%20order%20mesin" class="btn">Minta Penawaran</a>
   </div>
 </div>
 
@@ -257,10 +249,8 @@
   <p>© 2026 Indotech Jaya | Produsen Mesin Press Indonesia</p>
 </footer>
 
-<!-- WA FLOAT -->
-<a href="https://wa.me/628771505000" class="wa-float" target="_blank">💬</a>
+<a href="https://wa.me/6287771505000" class="wa-float" target="_blank">💬</a>
 
-<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
