@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Indotech Jaya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581092919535-7146ff1f9c5f') center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .btn {
+      background: green;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .produk {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3, .card p {
+      padding: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+    }
+
+    button {
+      background: #1f3c88;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Floating WA */
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: green;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Indotech Jaya</h1>
+  <p>Spesialis Mesin Press Industri</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#produk">Produk</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home" data-aos="fade-up">
+  <h2>Produsen Mesin Press Profesional</h2>
+  <p>Kami melayani pembuatan mesin custom</p>
+  <br>
+  <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi" class="btn" target="_blank">
+    Chat WhatsApp
+  </a>
+</section>
+
+<!-- PRODUK -->
+<div class="container" id="produk">
+  <h2 data-aos="fade-up">Produk Kami</h2>
+
+  <div class="produk">
+
+    <div class="card" data-aos="zoom-in">
+      <img src="https://images.unsplash.com/photo-1581091215367-59ab6b2c1d9b">
+      <h3>Mesin Press Hidrolik</h3>
+      <p>Kuat dan presisi tinggi untuk industri besar</p>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232">
+      <h3>Mesin Press Manual</h3>
+      <p>Solusi ekonomis untuk UMKM</p>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <img src="https://images.unsplash.com/photo-1581092919535-7146ff1f9c5f">
+      <h3>Custom Mesin Press</h3>
+      <p>Desain sesuai kebutuhan produksi Anda</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- KONTAK -->
+<div class="container" id="kontak">
+  <h2 data-aos="fade-up">Kontak Kami</h2>
+
+  <form onsubmit="kirimPesan(event)">
+    <input type="text" id="nama" placeholder="Nama" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="pesan" placeholder="Pesan" required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2026 Indotech Jaya</p>
+</footer>
+
+<!-- Floating WA -->
+<a href="https://wa.me/6281234567890" class="wa-float" target="_blank">💬</a>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+
+  function kirimPesan(e) {
+    e.preventDefault();
+
+    let nama = document.getElementById("nama").value;
+
+    alert("Terima kasih " + nama + ", pesan Anda sudah dikirim!");
+
+    // nanti bisa connect ke backend PHP / Node
+  }
+</script>
+
+</body>
+</html>
