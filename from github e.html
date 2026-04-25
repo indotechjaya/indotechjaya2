@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Indotech Jaya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Produsen mesin press hidrolik, press kardus, botol plastik, kaleng & custom sejak 2013. Melayani seluruh Indonesia.">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Indotech Jaya - Produsen Mesin Press Industri">
+  <meta property="og:description" content="Produsen mesin press sejak 2013. Melayani seluruh Indonesia. Custom sesuai kebutuhan industri.">
+  <meta property="og:image" content="https://indotechjaya.my.id/thumbnail.jpg">
+  <meta property="og:url" content="https://indotechjaya.my.id">
+  <meta property="og:type" content="website">
+
+  <style>
+    body {margin:0;font-family:Arial;background:#f4f4f4;}
+    header {background:#1f3c88;color:#fff;padding:15px;text-align:center;}
+    nav {background:#333;padding:10px;text-align:center;}
+    nav a {color:#fff;margin:0 15px;text-decoration:none;}
+    nav a:hover {color:gold;}
+
+    /* HERO FIX */
+    .hero {
+      position: relative;
+      background: url('https://indotechjaya.my.id/mesin-utama.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(1px);
+    }
+
+    .hero * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* RESPONSIVE HP */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 50px 15px;
+      }
+
+      .hero h2 {
+        font-size: 22px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 14px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .container {padding:20px;max-width:1100px;margin:auto;}
+    .produk {display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
+
+    .card {
+      background:white;width:300px;border-radius:25px;
+      overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {width:100%;height:200px;object-fit:cover;}
+    .card h3,.card p {padding:10px;}
+
+.highlight {
+  background: white;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 1px 1px; /* dari 20 → 12 */
+  transition: 0.3s;
+}
+
+.highlight:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+    form input, form textarea {
+      width:100%;padding:10px;margin:5px 0;box-sizing: border-box;border: 1px solid #ddd;border-radius:6px;
+    }
+
+    button {
+      background:#1f3c88;color:white;padding:10px;border:none;cursor:pointer;
+    }
+
+    footer {
+      background:#222;color:white;text-align:center;padding:20px;
+    }
+
+    .wa-float {
+      position:fixed;bottom:20px;right:20px;
+      background:green;color:white;padding:15px;
+      border-radius:50%;text-decoration:none;font-size:20px;
+    }
+
+    /* LIGHTBOX STYLE */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 25px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* rasio 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 10px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 25px;
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Indotech Jaya</h1>
+  <p>Produsen Mesin Press Industri Profesional</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#produk">Produk</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home" data-aos="fade-up">
+  <h2>Produsen Mesin Press Berkualitas & Custom</h2>
+  <p>Berpengalaman sejak 2013 melayani kebutuhan mesin industri di seluruh Indonesia</p>
+  <br>
+  <a href="https://wa.me/6287771505000?text=Halo%20saya%20ingin%20konsultasi%20mesin%20press" class="btn" target="_blank">
+    Konsultasi Gratis via WhatsApp
+  </a>
+</section>
+
+<!-- TENTANG -->
+<div class="container">
+  <div class="highlight" data-aos="fade-up">
+    <h2>Tentang Kami</h2>
+    <p>
+      Indotech Jaya adalah perusahaan yang bergerak di bidang pembuatan mesin press industri yang berlokasi di 
+      Jalan Gatot Subroto Km 2,5, RT.1 RW1 Cimone, Kota Tangerang, Indonesia (15114).
+    </p>
+    <p>
+      Berpengalaman sejak tahun 2013 hingga sekarang, kami telah melayani permintaan mesin dari seluruh Indonesia 
+      dengan total produksi lebih dari 100 unit mesin.
+    </p>
+    <p>
+      Kami berkomitmen menghadirkan mesin berkualitas tinggi, kuat, dan sesuai kebutuhan produksi pelanggan.
+    </p>
+  </div>
+</div>
+
+<!-- KEUNGGULAN -->
+<div class="container">
+  <div class="highlight" data-aos="fade-up">
+    <h2>Keunggulan Kami</h2>
+    <ul>
+      <li>✔ Custom sesuai kebutuhan industri</li>
+      <li>✔ Material kuat & tahan lama</li>
+      <li>✔ Presisi tinggi</li>
+      <li>✔ Konsultasi langsung dengan teknisi</li>
+      <li>✔ Harga langsung dari produsen</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PRODUK -->
+<div class="container" id="produk">
+  <div class="highlight" data-aos="fade-up">
+    <h2>Produk Kami</h2>
+
+    <div class="produk">
+
+    <div class="card" data-aos="zoom-in">
+      <img src="mesin1.jpg" onclick="bukaGambar(this.src)">
+      <h3>Mesin Press Rumput Laut</h3>
+      <p>Mesin khusus untuk industri pengolahan rumput laut</p>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <img src="mesin2.jpg" onclick="bukaGambar(this.src)">
+      <h3>Mesin Press Botol Plastik</h3>
+      <p>Efektif untuk pengepresan limbah plastik</p>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <img src="mesin3.jpg" onclick="bukaGambar(this.src)">
+      <h3>Mesin Press Kardus</h3>
+      <p>Solusi untuk pengepresan kardus dan kertas</p>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <img src="mesin4.jpg" onclick="bukaGambar(this.src)">
+      <h3>Mesin Press Kaleng</h3>
+      <p>Untuk semua jenis kaleng industri</p>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <img src="mesin5.jpg" onclick="bukaGambar(this.src)">
+      <h3>Mesin Big Press</h3>
+      <p>Kapasitas besar untuk kebutuhan industri berat</p>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- GALLERY -->
+<div class="container">
+  <div class="highlight" data-aos="fade-up">
+    <h2>Dokumentasi Mesin & Hasil Produksi</h2>
+
+    <div class="gallery">
+
+      <img src="gallery1.jpg" onclick="bukaGambar(this.src)">
+      <img src="gallery2.jpg" onclick="bukaGambar(this.src)">
+      <img src="gallery3.jpg" onclick="bukaGambar(this.src)">
+      <img src="gallery4.jpg" onclick="bukaGambar(this.src)">
+      <img src="gallery5.jpg" onclick="bukaGambar(this.src)">
+      <img src="gallery6.jpg" onclick="bukaGambar(this.src)">
+
+    </div>
+  </div>
+</div>
+
+
+<!-- VIDEO -->
+<div class="container">
+  <div class="highlight" data-aos="fade-up">
+    <h2>Video Mesin Kami</h2>
+
+    <div class="video-grid">
+
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO1"
+        allowfullscreen>
+      </iframe>
+
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO2"
+        allowfullscreen>
+      </iframe>
+
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO3"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="container">
+  <div class="highlight" data-aos="fade-up">
+    <h2>Butuh Mesin Custom?</h2>
+    <p>Konsultasikan kebutuhan Anda sekarang dan dapatkan solusi terbaik dari tim kami.</p>
+    <a href="https://wa.me/6287771505000?text=Halo%20saya%20ingin%20order%20mesin" class="btn">Minta Penawaran</a>
+  </div>
+</div>
+
+<!-- KONTAK -->
+<div class="container" id="kontak">
+  <h2 data-aos="fade-up">Kontak Kami</h2>
+
+  <p>
+    📍 Jalan Gatot Subroto Km 2,5 | RT.1 RW1 - Cimone | Kota Tangerang | Indonesia 15114
+  </p>
+
+  <form onsubmit="kirimPesan(event)">
+    <input type="text" id="nama" placeholder="Nama" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="pesan" placeholder="Pesan" required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="tutupGambar()">
+  <img id="lightbox-img">
+</div>
+
+<footer>
+  <p>© 2026 Indotech Jaya | Produsen Mesin Press Indonesia</p>
+</footer>
+
+<a href="https://wa.me/6287771505000" class="wa-float" target="_blank">💬</a>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  function kirimPesan(e){
+  e.preventDefault();
+
+  let nama = document.getElementById("nama").value;
+  let email = document.getElementById("email").value;
+  let pesan = document.getElementById("pesan").value;
+
+  let text = `Halo Indotech Jaya,%0A%0A` +
+             `Nama: ${nama}%0A` +
+             `Email: ${email}%0A` +
+             `Pesan: ${pesan}`;
+
+  window.open("https://wa.me/6287771505000?text=" + text, "_blank");
+}
+
+function bukaGambar(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function tutupGambar() {
+  document.getElementById("lightbox").style.display = "none";
+}
+  
+</script>
+
+</body>
+</html>
